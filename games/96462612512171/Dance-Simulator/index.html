@@ -8,70 +8,19 @@
   </head>
   <body>
     <canvas></canvas>
-    <div class="timer frame">
-      <div class="inner">You have been honoring the pug for <span class="seconds">0</span> seconds<br/>
-      You are a <span class="grade">Assistant</span> of pug</div></div>
-  
-      <div class="sitter left">
-        <div class="watch">
-        watch me making this:
-        <a
-          class="yt"
-          href="https://www.youtube.com/watch?v=Sj1vbbRA07g"
-          target="_blank"
-          >youtube</a
-        >
-        </div>
-        <a
-        class="twitter"
-        href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fpuginarug.com&via=twholman&text=Do%20you%20love%20the%20pug?"
-        target="_blank"
-      ></a>
-      </div>
-      <div class="sitter right">
-        <div class="watch">
-          A <a href="https://theuselessweb.com" target="_blank">Useless Web</a> Project
-        </div>
-      </div>
     <script>
       const canvas = document.querySelector("canvas");
-      const secondsCount = document.querySelector(".seconds");
-      const level = document.querySelector(".grade");
-      const context = canvas.getContext("2d");
-      const pugDimensions = { width: 353 * 1.2, height: 325 * 1.2 };
-      
-      
-      const levels = {
-        5: "Sr Assistant",
-        10: "Jr Honoror",
-        15: "Master Honoror",
-        35: "S Tier Honoror",
-        65: "Junior Acolyte",
-        105: "Acolyte",
-        150: "Senior Acolyte",
-        250: "Priest",
-        450: "Sage",
-        650: "Hermit",
-        1000: "Senior Hermit",
-        1500: "CEO",
-        2500: "Pope",
-        3500: "Underlord",
-        4500: "Lord",
-        10500: "OverLord",
-        20500: "King",
-        30500: "Anunnaki"
-      }
-      
-      const startTime = Date.now();
+      const canvashtml = canvas.getcanvashtml("2d");
+      const packgodDims = { width: 353 * 1.2, height: 325 * 1.2 };
       
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
-      context.translate(window.innerWidth / 2, window.innerHeight / 2);
+      canvashtml.translate(window.innerWidth / 2, window.innerHeight / 2);
       
       const image = new Image();
-      image.src = "/images/packgodwoutvignette.png"; // Photo credit to Matthew Henry (https://unsplash.com/photos/U5rMrSI7Pn4)
+      image.src = "/images/packgodwoutvignette.png";
       
-      const loopingPugs = 40; // 125 pugs required to cover a full 4K television screen. Tested via Firefox DevTools
+      const loopingpackgods = 40;
       const offsetDistance = 120;
       let currentOffset = 0;
       
@@ -94,21 +43,21 @@
       window.onresize = () => {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
-        context.setTransform(1, 0, 0, 1, 0, 0); //Reset the canvas context
-        context.translate(window.innerWidth / 2, window.innerHeight / 2);
+        canvashtml.setTransform(1, 0, 0, 1, 0, 0);
+        canvashtml.translate(window.innerWidth / 2, window.innerHeight / 2);
       };
       
       window.addEventListener('mousemove', onMouseMove)
       
       function draw(offset, loopCount) {
       
-        let currentPercentage = (loopingPugs - loopCount) / loopingPugs
-        context.drawImage(
+        let currentPercentage = (loopingpackgods - loopCount) / loopingpackgods
+        canvashtml.drawImage(
           image,
-          -pugDimensions.width / 2 - offset/2 + (movementOffset.x * currentPercentage),
-          -pugDimensions.height / 2 - offset/2 + (movementOffset.y * currentPercentage),
-          pugDimensions.width + offset,
-          pugDimensions.height + offset
+          -packgodDims.width / 2 - offset/2 + (movementOffset.x * currentPercentage),
+          -packgodDims.height / 2 - offset/2 + (movementOffset.y * currentPercentage),
+          packgodDims.width + offset,
+          packgodDims.height + offset
         );
       }
       
@@ -126,7 +75,7 @@
         movementOffset.x = lerp(movementOffset.x, mouseOffset.x, 0.05)
         movementOffset.y = lerp(movementOffset.y, mouseOffset.y, 0.05)
       
-        for (let i = loopingPugs; i >= 1; i--) {
+        for (let i = loopingpackgods; i >= 1; i--) {
           draw(i * offsetDistance + currentOffset, i);
         }
       
@@ -135,14 +84,6 @@
         currentOffset++;
         if (currentOffset >= offsetDistance) {
           currentOffset = 0;
-        }
-      
-        const newTime = Math.floor((Date.now() - startTime) / 1000);
-      
-        secondsCount.innerText = newTime;
-      
-        if(levels[newTime]) {
-          level.innerText = levels[newTime]
         }
       
         requestAnimationFrame(loopDraw);
