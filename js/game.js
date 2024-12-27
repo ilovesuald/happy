@@ -95,31 +95,20 @@ function startLevel2(){
     document.getElementById("thegame").innerHTML = "";
     document.getElementById("thegame").style.backgroundColor = "#000000";
     document.getElementById("thegame").style.background = "url(/images/trolleyproblem.png)";
-    document.getElementById("thegame").innerHTML = '';
+    document.getElementById("thegame").innerHTML = '<img src="/images/packgod.png" width="79" height="107" style="position: absolute; pointer-events: none; z-index: 11; bottom: 50px; left: 500px; transform: rotateY(-180deg) rotateZ(-20deg);">';
 
-    var evilpackgod = document.createElement("img");
-    evilpackgod.src = "/images/evilpackgod.png";
-    evilpackgod.style.position = "absolute";
-    evilpackgod.style.pointerEvents = "none";
-    evilpackgod.style.zIndex = 11;
-    evilpackgod.style.bottom = "0px";
-    evilpackgod.style.left = "500px";
-    evilpackgod.width = "79";
-    evilpackgod.height = "107";
-    document.getElementById("thegame").appendChild(evilpackgod);
+    //evilpackgod.addEventListener("click", function(){
+    //    if (click < 1){
+    //        click += 1;
 
-    evilpackgod.addEventListener("click", function(){
-        if (click < 1){
-            click += 1;
+    //         document.getElementById("packgod").src = "/images/deadpackgod.png";
+    //         document.getElementById("packgod").style.pointerEvents = "none";
 
-            document.getElementById("packgod").src = "/images/deadpackgod.png";
-            document.getElementById("packgod").style.pointerEvents = "none";
+    //         splatter.style.visibility = "";
 
-            splatter.style.visibility = "";
-
-            setTimeout(() => {
-                failed()
-            }, 500);
-        }
-    });
+    //         setTimeout(() => {
+    //             failed()
+    //         }, 500);
+    //     }
+    // });
 }
