@@ -94,10 +94,8 @@ function startLevel2(){
 
     document.getElementById("thegame").innerHTML = "";
     document.getElementById("thegame").style.backgroundColor = "#000000";
-    document.getElementById("thegame").style.background = "url(/images/level2room.png)";
-    document.getElementById("thegame").innerHTML = '<img src="/images/packgod.png" width="79" height="107" id="packgodRight" style="pointer-events: all; bottom: 20px; left: 400px; position: absolute; z-index: 2; transform: rotateY(-180deg);"><img src="/images/packgod.png" width="79" height="107" id="packgod" style="bottom: 0; left: 335px; position: absolute; pointer-events: all;"><img src="/images/packgod.png" width="79" height="107" id="packgodRight" style="pointer-events: all; bottom: 30px; left: 310px; position: absolute; z-index: 2; transform: rotateY(-180deg);"><img src="/images/packgod.png" width="79" height="107" id="packgod" style="bottom: 0; left: 410px; position: absolute; pointer-events: all;"><img src="/images/packgod.png" width="79" height="107" id="packgod" style="bottom: 0; left: 450px; position: absolute; pointer-events: all;"><img src="/images/packgod.png" width="79" height="107" id="packgodRight" style="pointer-events: all; bottom: 20px; left: 550px; position: absolute; z-index: 2; transform: rotateY(-180deg);"><img src="/images/packgod.png" width="79" height="107" id="packgod" style="bottom: 0; left: 585px; position: absolute; pointer-events: all;"><img src="/images/packgod.png" width="79" height="107" id="packgodRight" style="pointer-events: all; bottom: 10px; left: 270px; position: absolute; z-index: 1; transform: rotateY(-180deg);"><img src="/images/packgod.png" width="79" height="107" id="packgod" style="bottom: 0; left: 175px; position: absolute; pointer-events: all;"><img src="/images/packgod.png" width="79" height="107" id="packgodRight" style="pointer-events: all; bottom: 50px; left: 350px; position: absolute; z-index: 2; transform: rotateY(-180deg);"><img src="/images/packgod.png" width="79" height="107" id="packgod" style="bottom: 0; left: 250px; position: absolute; pointer-events: all;">';
-
-    '<img src="/images/evilpackgod.png" width="79" height="107" id="packgod" style="bottom: 0; left: 500px; position: absolute; pointer-events: all;">'
+    document.getElementById("thegame").style.background = "url(/images/trolleyproblem.png)";
+    document.getElementById("thegame").innerHTML = '';
 
     var evilpackgod = document.createElement("img");
     evilpackgod.src = "/images/evilpackgod.png";
